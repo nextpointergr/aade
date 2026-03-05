@@ -10,9 +10,10 @@ class AadeServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/aade.php',
+            __DIR__.'/config/aade.php',
             'aade'
         );
+
 
         $this->app->singleton(Aade::class, function () {
             return new Aade();
