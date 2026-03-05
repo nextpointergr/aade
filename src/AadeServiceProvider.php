@@ -25,7 +25,7 @@ class AadeServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/aade.php' => config_path('aade.php'),
+            __DIR__.'/config/aade.php' => config_path('aade.php'),
         ], 'aade-config');
     }
 }
