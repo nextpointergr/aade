@@ -1,0 +1,25 @@
+{
+  "name": "nextpointer/aade",
+  "description": "Laravel AADE AFM lookup package",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "NextPointer\\Aade\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "NextPointer\\Aade\\AadeServiceProvider"
+      ],
+      "aliases": {
+        "Aade": "NextPointer\\Aade\\Facades\\Aade"
+      }
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^12.0"
+  }
+}
