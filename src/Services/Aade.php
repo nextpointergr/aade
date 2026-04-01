@@ -266,6 +266,14 @@ XML;
             ];
         }
 
+        $mainActivityName = null;
+        foreach ($activities as $activity) {
+            if ($activity['type'] === "1") {
+                $mainActivityName = $activity['description']; // Κρατάμε μόνο το όνομα
+                break;
+            }
+        }
+
         return [
             'success' => true,
             'data' => [
@@ -278,6 +286,7 @@ XML;
                 'tax_office' => $cleanBasic['doyDescr'] ?? null,
                 'status' => $cleanBasic['deactivationFlagDescr'] ?? null,
                 'activities' => $activities,
+                'activity' => $mainActivityName,
             ]
         ];
     }

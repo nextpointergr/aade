@@ -89,11 +89,11 @@ class AadeResponse
         return $this->data()['activities'] ?? [];
     }
 
-    public function getMainActivity(): ?array
+    public function getMainActivity(): ?string
     {
         foreach ($this->getActivities() as $activity) {
             if ($activity['type'] == '1') {
-                return $activity;
+                return $activity['description'] ?? null;
             }
         }
 
